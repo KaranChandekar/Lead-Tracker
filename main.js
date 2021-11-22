@@ -1,6 +1,8 @@
-let buttonEl = document.getElementById("input-btn")
-let inputEl = document.getElementById("input-el")
+let myLeads = []
+const inputBtn = document.getElementById("input-btn")
+const saveEl = document.getElementById("save-el")
 
-buttonEl.addEventListener("click", function () {
-    console.log("button clicked")
+inputBtn.addEventListener("click", function () {
+    myLeads.push("www.owesomleads.com")
+    console.log(myLeads)
 })
