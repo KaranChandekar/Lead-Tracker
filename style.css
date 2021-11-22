@@ -9,7 +9,7 @@ input {
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #5f9341;
-    margin-bottom: 4px;
+    margin: 4px 0px;
 }
 
 button {
@@ -19,3 +19,4 @@ button {
     font-weight: bold;
     border: none;
 }
+
