@@ -1,5 +1,4 @@
 let myLeads = []
-// let oldLeads = []     // if added in future
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
@@ -12,15 +11,12 @@ if (leadsFromLocalStorage) {
     render(myLeads)
 }
 
-const tabs = [
-   {url: "https://www.linkedin.com"}
-]
-
 tabBtn.addEventListener("click", function(){
-//    console.log(tabs[0].url)
-    myLeads.push(tabs[0].url)
-    localStorage.setItem( "myleads", JSON.stringify(myLeads) )
-    render(myLeads)
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myLeads.push(tabs[0].url)
+        localStorage.setItem( "myleads", JSON.stringify(myLeads) )
+        render(myLeads)
+    })
 })
 
 function render(leads) {
@@ -28,9 +24,7 @@ function render(leads) {
     for (let i = 0; i < leads.length; i++) {
         listItems += `
             <li>
-                <a 
-                    target="_blank" href="${leads[i]}"> ${leads[i]}
-                </a>
+                <a target="_blank" href="${leads[i]}"> ${leads[i]} </a>
             </li>
         `
     }
