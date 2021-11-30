@@ -30,3 +30,6 @@ If you have any feedback, please reach out to me at twitter @karan_chandekar
 
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/karan_chandekar)
 
+## Screenshot
+
+[![lead-tracker.png](https://i.postimg.cc/HnmdmBWG/lead-tracker.png)](https://postimg.cc/Hc6f4073)
